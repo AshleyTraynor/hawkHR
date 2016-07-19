@@ -11,6 +11,13 @@
     KeyID:  <asp:Label runat="server" ID="labelKeyID" />
     <br />
     vCode: <asp:Label runat="server" ID="labelvCode" />
+    <br />
+    <asp:Button runat="server" ID="ButtonSubmit" Text="Submit"/>
+    <br />
+    <asp:ListBox runat="server" ID="listboxCharacters" />
+    <br />
+    <asp:TextBox runat="server" ID="textboxCharacters" />
+
 
 </asp:Content>
 
