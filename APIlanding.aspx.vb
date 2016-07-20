@@ -50,13 +50,6 @@ Partial Class APIlanding
             panelC2.Visible = False
         End If
 
-
-
-
-
-        'listboxCharacters
-        'https://image.eveonline.com/Character/94484111_128.jpg
-
     End Sub
 
 End Class
