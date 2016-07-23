@@ -31,8 +31,16 @@
                         <div class="thumbnail">
                             <asp:Image ID="Portrait0" runat="server" ImageUrl="~/Content/Images/noImage256.jpg" CssClass="Portrait" />
                             <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>This section will contain info such as corporation, total SP, wallet, current skill training....</p>
+                                <h3>
+                                    <asp:Label runat="server" Text="No character name lol" ID="charName0" /></h3>
+                                <p>
+                                    <span class="userDetails">
+                                        <asp:Label runat="server" ID="skillPoints0" Text="API not successfully loaded" />
+                                    </span>
+                                    <span class="userDetails">
+
+                                    </span>
+                                </p>
                                 <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                             </div>
                         </div>
@@ -43,8 +51,16 @@
                         <div class="thumbnail">
                             <asp:Image ID="Portrait1" runat="server" ImageUrl="~/Content/Images/blankImage.png" />
                             <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>This section will contain info such as corporation, total SP, wallet, current skill training....</p>
+                                <h3>
+                                    <asp:Label runat="server" Text="No character name lol" ID="charName1" /></h3>
+                                <p>
+                                    <span class="userDetails">
+                                        <asp:Label runat="server" ID="skillPoints1" Text="API not successfully loaded" />
+                                    </span>
+                                    <span class="userDetails">
+
+                                    </span>
+                                </p>
                                 <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                             </div>
                         </div>
@@ -55,8 +71,16 @@
                         <div class="thumbnail">
                             <asp:Image ID="Portrait2" runat="server" ImageUrl="~/Content/Images/blankImage.png" />
                             <div class="caption">
-                                <h3>Thumbnail label</h3>
-                                <p>This section will contain info such as corporation, total SP, wallet, current skill training....</p>
+                                <h3>
+                                    <asp:Label runat="server" Text="No character name lol" ID="charName2" /></h3>
+                                <p>
+                                    <span class="userDetails">
+                                        <asp:Label runat="server" ID="skillPoints2" Text="API not successfully loaded" />
+                                    </span>
+                                    <span class="userDetails">
+
+                                    </span>
+                                </p>
                                 <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
                             </div>
                         </div>
