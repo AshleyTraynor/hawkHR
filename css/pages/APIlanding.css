@@ -17,3 +17,7 @@
 .userDetails {
     display: block;
 }
+
+.strongLabel {
+    font-weight: 600
+}
