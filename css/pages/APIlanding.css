@@ -13,3 +13,12 @@
     margin-left: 0px;
     margin-right: 0px;
 }
+
+.userDetails {
+    display: block;
+    }
+
+.strongLabel {
+    font-weight: 600
+}
+
