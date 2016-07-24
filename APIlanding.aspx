@@ -145,15 +145,35 @@
                 </asp:Panel>
             </div>
             <div class="row">
-                <span class="userDetails">
-                    Account Expires at
-                </span>
-                <span class="userDetails">
+                <div class="col-sm-6 col-md-4">
+                    <i>
+                        <span class="userDetails">This API key expires at:
+                        <asp:Label runat="server" ID="keyExpiryLabel" Text="Never" />
+                        </span>
+                        <br />
+                        <span class="userDetails">Account opened at:
+                        <asp:Label runat="server" ID="accountStartedLabel" Text="No data" />
+                        </span>
+                        <span class="userDetails">Account expires at:
+                        <asp:Label runat="server" ID="accountExpiryLabel" Text="No data" />
+                        </span></i>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <i>
+                        <span class="userDetails">Log in count:  
+                        <asp:Label runat="server" ID="logonCountLabel" Text="No data" />
+                        </span>
+                        <span class="userDetails">Logged in for: 
+                        <asp:Label runat="server" ID="logonTimeLabel" Text="No data" />
+                        </span>
+                        <span class="userDetails">Average login time: 
+                        <asp:Label runat="server" ID="logonTimeAverageLabel" Text="No data" />
+                        </span>
+                    </i>
 
-                </span>
+                </div>
             </div>
         </div>
-
 
     </div>
 

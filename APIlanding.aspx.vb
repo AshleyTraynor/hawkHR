@@ -196,6 +196,27 @@ Partial Class APIlanding
             panelC2.Visible = False
         End If
 
+        ' Key and Account Expiry
+        Dim keyExpiry As Date = userAPIKey.ExpiryDate.Date
+        keyExpiryLabel.Text = keyExpiry.Date
+
+        Dim accountStarted As String = userCharKey.GetAccountStatus.Result.CreationDateAsString
+        accountStartedLabel.Text = accountStarted
+
+        Dim accountPaidUntil As String = userCharKey.GetAccountStatus.Result.PaidUntilAsString
+        accountExpiryLabel.Text = accountPaidUntil
+
+        ' Logon count and minutes
+        Dim accountLogonCount As Integer = userCharKey.GetAccountStatus.Result.LogonCount
+        logonCountLabel.Text = accountLogonCount
+
+        Dim accountLogonTime As New TimeSpan(0, userCharKey.GetAccountStatus.Result.LogonMinutes, 0)
+        logonTimeLabel.Text = Math.Round(accountLogonTime.TotalDays).ToString + " days"
+
+        Dim t As Integer = userCharKey.GetAccountStatus.Result.LogonMinutes / accountLogonCount
+        Dim accountLogonAverage As New TimeSpan(0, t, 0)
+        logonTimeAverageLabel.Text = Math.Round(accountLogonAverage.Hours).ToString + " hours " + Math.Round(accountLogonAverage.Minutes).ToString + " minutes"
+
     End Sub
 
 End Class
