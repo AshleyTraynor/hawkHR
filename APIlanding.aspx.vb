@@ -29,21 +29,23 @@ Partial Class APIlanding
         If charCount >= 1 Then
 
             ' Creates the character object for pulling individual character data
-            Dim longCharID0 As Long = userAPIKey.GetCharacterList.Result.Characters(0).CharacterId
-            Dim charObject0 As New eZet.EveLib.EveXmlModule.Character(userCharKey, longCharID0.ToString)
+            Dim longCharID As Long = userAPIKey.GetCharacterList.Result.Characters(0).CharacterId
+            Dim charObject As New eZet.EveLib.EveXmlModule.Character(userCharKey, longCharID.ToString)
 
             ' Portrait specific CharacterID
-            Dim cID0 As String = longCharID0.ToString
-            Dim p0 As String = "https://image.eveonline.com/Character/" + cID0 + "_512.jpg"
+            Dim cID As String = longCharID.ToString
+            Dim p As String = "https://image.eveonline.com/Character/" + cID + "_512.jpg"
 
             ' Area for setting up character information variables
-            Dim name0 As String = userAPIKey.GetCharacterList.Result.Characters(0).CharacterName
-            Dim sp0 As Integer = charObject0.GetCharacterInfo.Result.SkillPoints
+            Dim name As String = userAPIKey.GetCharacterList.Result.Characters(0).CharacterName
+            Dim sp As Integer = charObject.GetCharacterInfo.Result.SkillPoints
+            Dim isk As Long = charObject.GetCharacterInfo.Result.AccountBalance
 
             'Area for applying character information variables to the frontend asp objects
-            charName0.Text = name0
-            Portrait0.ImageUrl() = p0
-            skillPoints0.Text = sp0.ToString("N0") 'This formats the SP to look pretty
+            charName0.Text = name
+            Portrait0.ImageUrl() = p
+            skillPoints0.Text = sp.ToString("N0") 'This formats the SP to look pretty
+            walletISK0.Text = isk.ToString("N0")
 
         Else
             panelC0.Visible = False
@@ -53,18 +55,20 @@ Partial Class APIlanding
 
         If charCount >= 2 Then
 
-            Dim longCharID1 As Long = userAPIKey.GetCharacterList.Result.Characters(1).CharacterId
-            Dim charObject1 As New eZet.EveLib.EveXmlModule.Character(userCharKey, longCharID1.ToString)
+            Dim longCharID As Long = userAPIKey.GetCharacterList.Result.Characters(1).CharacterId
+            Dim charObject As New eZet.EveLib.EveXmlModule.Character(userCharKey, longCharID.ToString)
 
-            Dim cID1 As String = longCharID1.ToString
-            Dim p1 As String = "https://image.eveonline.com/Character/" + cID1 + "_512.jpg"
+            Dim cID As String = longCharID.ToString
+            Dim p As String = "https://image.eveonline.com/Character/" + cID + "_512.jpg"
 
-            Dim name1 As String = userAPIKey.GetCharacterList.Result.Characters(1).CharacterName
-            Dim sp1 As Integer = charObject1.GetCharacterInfo.Result.SkillPoints
+            Dim name As String = userAPIKey.GetCharacterList.Result.Characters(1).CharacterName
+            Dim sp As Integer = charObject.GetCharacterInfo.Result.SkillPoints
+            Dim isk As Long = charObject.GetCharacterInfo.Result.AccountBalance
 
-            charName1.Text = name1
-            Portrait1.ImageUrl() = p1
-            skillPoints1.Text = sp1.ToString("N0")
+            charName1.Text = name
+            Portrait1.ImageUrl() = p
+            skillPoints1.Text = sp.ToString("N0")
+            walletISK1.Text = isk.ToString("N0")
 
         Else
             panelC1.Visible = False
@@ -74,18 +78,20 @@ Partial Class APIlanding
 
         If charCount >= 3 Then
 
-            Dim longCharID2 As Long = userAPIKey.GetCharacterList.Result.Characters(2).CharacterId
-            Dim charObject2 As New eZet.EveLib.EveXmlModule.Character(userCharKey, longCharID2.ToString)
+            Dim longCharID As Long = userAPIKey.GetCharacterList.Result.Characters(2).CharacterId
+            Dim charObject As New eZet.EveLib.EveXmlModule.Character(userCharKey, longCharID.ToString)
 
-            Dim cID2 As String = longCharID2.ToString
-            Dim p2 As String = "https://image.eveonline.com/Character/" + cID2 + "_512.jpg"
+            Dim cID As String = longCharID.ToString
+            Dim p As String = "https://image.eveonline.com/Character/" + cID + "_512.jpg"
 
-            Dim name2 As String = userAPIKey.GetCharacterList.Result.Characters(2).CharacterName
-            Dim sp2 As Integer = charObject2.GetCharacterInfo.Result.SkillPoints
+            Dim name As String = userAPIKey.GetCharacterList.Result.Characters(2).CharacterName
+            Dim sp As Integer = charObject.GetCharacterInfo.Result.SkillPoints
+            Dim isk As Long = charObject.GetCharacterInfo.Result.AccountBalance
 
-            charName2.Text = name2
-            Portrait2.ImageUrl() = p2
-            skillPoints2.Text = sp2.ToString("N0")
+            charName2.Text = name
+            Portrait2.ImageUrl() = p
+            skillPoints2.Text = sp.ToString("N0")
+            walletISK2.Text = isk.ToString("N0")
 
         Else
             panelC2.Visible = False

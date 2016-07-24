@@ -85,7 +85,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Ashley Traynor, Robby Godfather</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Ashley Traynor</p>
             </footer>
         </div>
     </form>

@@ -1,8 +1,8 @@
 ﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeFile="APIlanding.aspx.vb" Inherits="APIlanding" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent_CSS" runat="Server">
-    <link href="css/pages/APIlanding.less" rel="stylesheet" />
-</asp:Content>
+    <asp:Content ID="Content1" ContentPlaceHolderID="MainContent_CSS" runat="server">
+        <link href="css/pages/APIlanding.css" rel="stylesheet" />
+    </asp:Content>
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
@@ -36,9 +36,11 @@
                                 <p>
                                     <span class="userDetails">
                                         <asp:Label runat="server" ID="skillPoints0" Text="API not successfully loaded" />
+                                        SP
                                     </span>
                                     <span class="userDetails">
-
+                                        <asp:Label runat="server" ID="walletISK0" Text="API not successfully loaded" />
+                                        ISK
                                     </span>
                                 </p>
                                 <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
@@ -56,9 +58,11 @@
                                 <p>
                                     <span class="userDetails">
                                         <asp:Label runat="server" ID="skillPoints1" Text="API not successfully loaded" />
+                                        SP
                                     </span>
                                     <span class="userDetails">
-
+                                        <asp:Label runat="server" ID="walletISK1" Text="API not successfully loaded" />
+                                        ISK
                                     </span>
                                 </p>
                                 <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
@@ -76,9 +80,11 @@
                                 <p>
                                     <span class="userDetails">
                                         <asp:Label runat="server" ID="skillPoints2" Text="API not successfully loaded" />
+                                        SP
                                     </span>
                                     <span class="userDetails">
-
+                                        <asp:Label runat="server" ID="walletISK2" Text="API not successfully loaded" />
+                                        ISK
                                     </span>
                                 </p>
                                 <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
