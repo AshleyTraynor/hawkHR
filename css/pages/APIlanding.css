@@ -22,3 +22,16 @@
     font-weight: 600
 }
 
+#MainContent_labelvCode {
+    word-wrap: normal; 
+    word-break: break-all;
+}
+
+#extraDetails {
+    color: darkgray
+}
+
+
+#ButtonCentre {
+    margin-top: 15px;
+}
