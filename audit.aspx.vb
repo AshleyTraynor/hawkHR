@@ -2,12 +2,12 @@
 Imports eZet.EveLib.StaticDataModule
 Imports eZet.EveLib.EveXmlModule
 
-
-Partial Class APIlanding
+Partial Class audit
     Inherits System.Web.UI.Page
 
     Dim keyID As Long
     Dim vCode As String
+    Dim cID As String
 
     Private Sub APIlanding_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
@@ -265,4 +265,6 @@ Partial Class APIlanding
         Response.Redirect("APIlanding.aspx?keyID=" + keyID + "&vcode=" + vCode)
 
     End Sub
+
+
 End Class
