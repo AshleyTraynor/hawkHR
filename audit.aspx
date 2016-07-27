@@ -1,20 +1,20 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeFile="audit.aspx.vb" Inherits="audit" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Site.master" AutoEventWireup="false" CodeFile="Audit.aspx.vb" Inherits="Audit" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent_CSS" Runat="Server">
-    <link href="css/pages/audit.css" rel="stylesheet" />
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent_CSS" runat="server">
+    <link href="css/pages/Audit.css" rel="stylesheet" />
 </asp:Content>
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="Server">
 
-        <asp:Panel runat="server" ID="normalPanel" Visible="true">
+    <asp:Panel runat="server" ID="charSelectPanel" Visible="true">
         <div class="container" id="jumboContainer">
 
             <div class="CharacterBlock">
                 <div class="row">
                     <asp:Panel runat="server" ID="panelC0" Visible="true">
                         <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
+                            <div class="thumbnail" id="selectChar0Block" runat="server">
                                 <asp:Image ID="Portrait0" runat="server" ImageUrl="~/Content/Images/blankimage.jpg" CssClass="Portrait" />
                                 <div class="caption">
                                     <h3>
@@ -55,7 +55,7 @@
                     </asp:Panel>
                     <asp:Panel runat="server" ID="panelC1" Visible="true">
                         <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
+                            <div class="thumbnail" id="selectChar1Block" runat="server">
                                 <asp:Image ID="Portrait1" runat="server" ImageUrl="~/Content/Images/blankImage.png" />
                                 <div class="caption">
                                     <h3>
@@ -96,7 +96,7 @@
                     </asp:Panel>
                     <asp:Panel runat="server" ID="panelC2" Visible="true">
                         <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
+                            <div class="thumbnail" id="selectChar2Block" runat="server">
                                 <asp:Image ID="Portrait2" runat="server" ImageUrl="~/Content/Images/blankImage.png" />
                                 <div class="caption">
                                     <h3>
@@ -215,6 +215,75 @@
             </div>
 
         </div>
+    </asp:Panel>
+
+    <%---------------------------------------///////////////////////////////////////////////-----------------------------------------------------%>
+
+    <asp:Panel runat="server" ID="auditPanel" Visible="false">
+        <hr />
+
+        <asp:Panel runat="server" ID="historyPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+        <asp:Panel runat="server" ID="skillPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+         <asp:Panel runat="server" ID="killPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+        <asp:Panel runat="server" ID="mailPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+        <asp:Panel runat="server" ID="assetPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+        <asp:Panel runat="server" ID="journalPanel" Visible="true" >
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+        <asp:Panel runat="server" ID="transactionPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+        <%----------------------------------------------------------------------------------------------------------------------------------------%>
+
+        <asp:Panel runat="server" ID="contractPanel" Visible="true" >
+
+
+
+        </asp:Panel>
+
+
     </asp:Panel>
 
 </asp:Content>

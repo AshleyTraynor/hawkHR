@@ -7,7 +7,7 @@ Partial Class _Default
         Dim keyID As String = txtKeyID.Text
         Dim vCode As String = txtvCode.Text
 
-        Response.Redirect("APIlanding.aspx?keyID=" + keyID + "&vcode=" + vCode)
+        Response.Redirect("Audit.aspx?keyID=" + keyID + "&vcode=" + vCode + "&selectedcID=50")
 
     End Sub
 

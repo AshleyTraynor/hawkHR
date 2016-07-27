@@ -31,7 +31,10 @@
     color: darkgray
 }
 
-
 #ButtonCentre {
     margin-top: 15px;
+}
+
+.characterSelected {
+   background-color: #f1f1f1;
 }
