@@ -135,6 +135,7 @@ Partial Class Audit
                     Dim lastLocation As String = charObject.GetCharacterInfo.Result.LastKnownLocation
                     Dim charCorp As String = charObject.GetCharacterInfo.Result.CorporationName
                     Dim charAlliance As String = charObject.GetCharacterInfo.Result.AllianceName
+                    Dim tester123 As String = charObject.GetCharacterInfo.Result.EmploymentHistory.Item(0).CorporationName
 
                     corporationName1.Text = charCorp
                     If charAlliance Is Nothing Then
@@ -256,16 +257,25 @@ Partial Class Audit
                     Me.vCode = Request.QueryString("vCode")
                     Me.selectedcID = Request.QueryString("selectedcID")
 
-                    getCorpHistory(keyID, vCode, selectedcID)
+                    historyPanel.Visible = True
+
+                    gridviewHistoryTable.DataSource = getCorpHistory(keyID, vCode, selectedcID)
+                    gridviewHistoryTable.DataBind()
+
+                    Dim longCharID As Long = userAPIKey.GetCharacterList.Result.Characters(0).CharacterId
+                    Dim charObject As New Character(userCharKey, longCharID.ToString)
+
 
 
                 End If
 
             End If
+
         Catch ex As Exception
             Console.Write(ex)
 
             charSelectPanel.Visible = False
+
             errorPanel.Visible = True
 
         End Try
@@ -323,28 +333,23 @@ Partial Class Audit
     Public Function getCorpHistory(ByVal fKeyID As Long, ByVal fVCode As String, fCharacterID As Long) As DataTable
 
         Dim historyTable As New DataTable()
-        Dim column As New DataColumn
+        Dim charObject As New Character(fKeyID, fVCode, fCharacterID)
 
-        Dim xmlWriter As System.Xml.XmlWriter
-        Dim xmlReader As System.Xml.XmlReader
+        historyTable.Columns.Add("CorporationID")
+        historyTable.Columns.Add("CorporationName")
+        historyTable.Columns.Add("RecordID")
+        historyTable.Columns.Add("StartDate")
+        historyTable.Columns.Add("StarDateAsString")
 
-        Dim userCharKey As New CharacterKey(fKeyID, fVCode.ToString)
-        Dim charObject As New eZet.EveLib.EveXmlModule.Character(userCharKey, fCharacterID.ToString)
-
-        column = New DataColumn("CorporationID", GetType(System.String))
-        historyTable.Columns.Add(column)
-        column = New DataColumn("CorporationName", GetType(System.String))
-        historyTable.Columns.Add(column)
-        column = New DataColumn("RecordId", GetType(System.String))
-        historyTable.Columns.Add(column)
-        column = New DataColumn("StartDate", GetType(System.String))
-        historyTable.Columns.Add(column)
-        column = New DataColumn("StartDateAsString", GetType(System.String))
-        historyTable.Columns.Add(column)
-
-
-        xmlReader = charObject.GetCharacterInfo.Result.EmploymentHistory.ReadXml(xmlReader)
-        historyTable.WriteXml(xmlWriter)
+        For Each corp In charObject.GetCharacterInfo.Result.EmploymentHistory
+            Dim row As DataRow
+            row = historyTable.NewRow()
+            row.Item(0) = corp.CorporationId
+            row.Item(1) = corp.CorporationName
+            row.Item(2) = corp.RecordId
+            row.Item(3) = corp.StartDate
+            row.Item(4) = corp.StartDateAsString
+        Next
 
         Return historyTable
 

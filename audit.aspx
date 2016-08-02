@@ -203,9 +203,9 @@
                         <span class="input-group-addon" id="sizing-addon2">vCode</span>
                         <asp:TextBox runat="server" ID="vCodeErrorBox" CssClass="form-control" />
                     </div>
-                                        
+
                     <div id="ButtonCentre">
-                        <asp:Button runat="server" ID="buttonResubmit" CssClass="btn btn-primary" Text="Resubmit"/>
+                        <asp:Button runat="server" ID="buttonResubmit" CssClass="btn btn-primary" Text="Resubmit" />
                     </div>
                 </div>
             </div>
@@ -215,6 +215,10 @@
             </div>
 
         </div>
+
+                    <asp:GridView ID="gridviewHistoryTable" ClientIDMode="Static" runat="server" AutoGenerateColumns="true" />
+
+
     </asp:Panel>
 
     <%---------------------------------------///////////////////////////////////////////////-----------------------------------------------------%>
@@ -222,65 +226,45 @@
     <asp:Panel runat="server" ID="auditPanel" Visible="false">
         <hr />
 
-        <asp:Panel runat="server" ID="historyPanel" Visible="true" >
+        <asp:Panel runat="server" ID="historyPanel" Visible="true">
+            
 
-
-
+            
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-        <asp:Panel runat="server" ID="skillPanel" Visible="true" >
-
-
-
+        <asp:Panel runat="server" ID="skillPanel" Visible="true">
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-         <asp:Panel runat="server" ID="killPanel" Visible="true" >
-
-
-
+        <asp:Panel runat="server" ID="killPanel" Visible="true">
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-        <asp:Panel runat="server" ID="mailPanel" Visible="true" >
-
-
-
+        <asp:Panel runat="server" ID="mailPanel" Visible="true">
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-        <asp:Panel runat="server" ID="assetPanel" Visible="true" >
-
-
-
+        <asp:Panel runat="server" ID="assetPanel" Visible="true">
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-        <asp:Panel runat="server" ID="journalPanel" Visible="true" >
-
-
+        <asp:Panel runat="server" ID="journalPanel" Visible="true">
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-        <asp:Panel runat="server" ID="transactionPanel" Visible="true" >
-
-
-
+        <asp:Panel runat="server" ID="transactionPanel" Visible="true">
         </asp:Panel>
 
         <%----------------------------------------------------------------------------------------------------------------------------------------%>
 
-        <asp:Panel runat="server" ID="contractPanel" Visible="true" >
-
-
-
+        <asp:Panel runat="server" ID="contractPanel" Visible="true">
         </asp:Panel>
 
 
